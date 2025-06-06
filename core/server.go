@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/nzmxd/bserver/global"
 	"github.com/nzmxd/bserver/initialize"
+	"go.uber.org/zap"
 	"time"
 )
 
@@ -24,4 +25,15 @@ func RunServer() {
 	默认前端文件运行地址:http://127.0.0.1:%s
 `, address)
 	initServer(address, Router, 10*time.Minute, 10*time.Minute)
+}
+
+// InitializeSystem 初始化系统所有组件
+// 提取为单独函数以便于系统重载时调用
+func InitializeSystem() {
+	global.VP = Viper() // 初始化Viper
+	global.LOG = Zap()  // 初始化zap日志库
+	zap.ReplaceGlobals(global.LOG)
+	global.DB = initialize.Gorm() // gorm连接数据库
+	initialize.DBList()
+	initialize.SetupHandlers() // 注册全局函数
 }
