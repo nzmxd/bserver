@@ -9,14 +9,14 @@ import (
 
 func main() {
 	// 初始化系统
-	initializeSystem()
+	InitializeSystem()
 	// 运行服务器
 	core.RunServer()
 }
 
 // initializeSystem 初始化系统所有组件
 // 提取为单独函数以便于系统重载时调用
-func initializeSystem() {
+func InitializeSystem() {
 	global.VP = core.Viper() // 初始化Viper
 	global.LOG = core.Zap()  // 初始化zap日志库
 	zap.ReplaceGlobals(global.LOG)
