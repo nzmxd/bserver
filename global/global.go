@@ -25,6 +25,7 @@ var (
 	DBList              map[string]*gorm.DB
 	REDIS               redis.UniversalClient
 	REDISList           map[string]redis.UniversalClient
+	ROUTERList          []func(*gin.RouterGroup)
 	MONGO               *qmgo.QmgoClient
 	CONFIG              config.Server
 	VP                  *viper.Viper

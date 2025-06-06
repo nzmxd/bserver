@@ -62,9 +62,16 @@ func Routers() *gin.Engine {
 			c.JSON(http.StatusOK, "ok")
 		})
 	}
+	for _, f := range global.ROUTERList {
+		f(PublicGroup)
+	}
 
 	global.ROUTERS = Router.Routes()
 
 	global.LOG.Info("router register success")
 	return Router
+}
+
+func AddRouters(routerGroupsFunc ...func(*gin.RouterGroup)) {
+	global.ROUTERList = append(global.ROUTERList, routerGroupsFunc...)
 }
