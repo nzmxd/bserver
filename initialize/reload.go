@@ -29,7 +29,6 @@ func Reload() error {
 	global.DB = Gorm()
 
 	// 重新初始化其他配置
-	OtherInit()
 	DBList()
 
 	if global.DB != nil {
