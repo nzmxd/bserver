@@ -20,14 +20,8 @@ func (g *_gorm) Config(prefix string, singular bool) *gorm.Config {
 	switch global.CONFIG.System.DbType {
 	case "mysql":
 		general = global.CONFIG.Mysql.GeneralDB
-	case "pgsql":
-		general = global.CONFIG.Pgsql.GeneralDB
-	case "oracle":
-		general = global.CONFIG.Oracle.GeneralDB
 	case "sqlite":
 		general = global.CONFIG.Sqlite.GeneralDB
-	case "mssql":
-		general = global.CONFIG.Mssql.GeneralDB
 	default:
 		general = global.CONFIG.Mysql.GeneralDB
 	}

@@ -6,7 +6,6 @@ import (
 	"github.com/nzmxd/bserver/core/internal"
 	"github.com/nzmxd/bserver/global"
 	"os"
-	"path/filepath"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/gin-gonic/gin"
@@ -37,7 +36,6 @@ func Viper() *viper.Viper {
 	}
 
 	// root 适配性 根据root位置去找到对应迁移位置,保证root路径有效
-	global.CONFIG.AutoCode.Root, _ = filepath.Abs("..")
 	return v
 }
 
