@@ -1,0 +1,85 @@
+# zap logger configuration
+zap:
+    level: info
+    format: console
+    prefix: "[bserver]"
+    director: log
+    show-line: true
+    encode-level: LowercaseColorLevelEncoder
+    stacktrace-key: stacktrace
+    log-in-console: true
+    retention-day: -1
+
+# redis configuration
+redis:
+    #是否使用redis集群模式
+    useCluster: false
+    #使用集群模式addr和db默认无效
+    addr: 127.0.0.1:6379
+    password: ""
+    db: 0
+    clusterAddrs:
+        - "172.21.0.3:7000"
+        - "172.21.0.4:7001"
+        - "172.21.0.2:7002"
+
+# system configuration
+system:
+    env: local # 修改为public可以关闭路由日志输出
+    addr: 8888
+    db-type: mysql
+    oss-type: local # 控制oss选择走本地还是 七牛等其他仓 自行增加其他oss仓可以在 server/utils/upload/upload.go 中 NewOss函数配置
+    use-redis: false # 使用redis
+    use-multipoint: false
+    #  路由全局前缀
+    router-prefix: ""
+    #  严格角色模式 打开后权限将会存在上下级关系
+    use-strict-auth: false
+
+# mysql connect configuration
+# 未初始化之前请勿手动修改数据库信息！！！如果一定要手动初始化请看（https://gin-vue-admin.com/docs/first_master）
+mysql:
+    path: ""
+    port: ""
+    config: ""
+    db-name: ""
+    username: ""
+    password: ""
+    max-idle-conns: 10
+    max-open-conns: 100
+    log-mode: ""
+    log-zap: false
+
+db-list:
+    - disable: true # 是否禁用
+      type: "" # 数据库的类型,目前支持mysql、pgsql、mssql、oracle
+      alias-name: "" # 数据库的名称,注意: alias-name 需要在db-list中唯一
+      path: ""
+      port: ""
+      config: ""
+      db-name: ""
+      username: ""
+      password: ""
+      max-idle-conns: 10
+      max-open-conns: 100
+      log-mode: ""
+      log-zap: false
+
+# local configuration
+local:
+    path: uploads/file
+    store-path: uploads/file
+
+# minio oss configuration
+minio:
+  endpoint: yourEndpoint
+  access-key-id: yourAccessKeyId
+  access-key-secret: yourAccessKeySecret
+  bucket-name: yourBucketName
+  use-ssl: false
+  base-path: ""
+  bucket-url: "http://host:9000/yourBucketName"
+
+# disk usage configuration
+disk-list:
+    - mount-point: "/"
