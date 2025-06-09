@@ -34,6 +34,7 @@ func InitializeSystem() {
 	global.LOG = Zap()  // 初始化zap日志库
 	zap.ReplaceGlobals(global.LOG)
 	global.DB = initialize.Gorm() // gorm连接数据库
+	global.CH = initialize.GormClickHouse()
 	initialize.DBList()
 	initialize.SetupHandlers() // 注册全局函数
 }

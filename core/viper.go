@@ -39,6 +39,31 @@ func Viper() *viper.Viper {
 	return v
 }
 
+func NViper(configPath string, configObj interface{}) *viper.Viper {
+	v := viper.New()
+	v.SetConfigFile(configPath)
+	v.SetConfigType("yaml")
+
+	if err := v.ReadInConfig(); err != nil {
+		panic(fmt.Errorf("fatal error reading config file: %w", err))
+	}
+
+	v.WatchConfig()
+
+	v.OnConfigChange(func(e fsnotify.Event) {
+		fmt.Println("config file changed:", e.Name)
+		if err := v.Unmarshal(configObj); err != nil {
+			fmt.Println("unmarshal error on config change:", err)
+		}
+	})
+
+	if err := v.Unmarshal(configObj); err != nil {
+		panic(fmt.Errorf("fatal error unmarshalling config: %w", err))
+	}
+
+	return v
+}
+
 // getConfigPath 获取配置文件路径, 优先级: 命令行 > 环境变量 > 默认值
 func getConfigPath() (config string) {
 	// `-c` flag parse

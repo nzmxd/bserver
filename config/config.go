@@ -6,6 +6,7 @@ type Server struct {
 	RedisList  []Redis         `mapstructure:"redis-list" json:"redis-list" yaml:"redis-list"`
 	System     System          `mapstructure:"system" json:"system" yaml:"system"`
 	Mysql      Mysql           `mapstructure:"mysql" json:"mysql" yaml:"mysql"`
+	ClickHouse ClickHouse      `mapstructure:"clickhouse" json:"clickhouse" yaml:"clickhouse"`
 	Sqlite     Sqlite          `mapstructure:"sqlite" json:"sqlite" yaml:"sqlite"`
 	DBList     []SpecializedDB `mapstructure:"db-list" json:"db-list" yaml:"db-list"`
 	Local      Local           `mapstructure:"local" json:"local" yaml:"local"`

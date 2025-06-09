@@ -22,6 +22,7 @@ import (
 
 var (
 	DB                  *gorm.DB
+	CH                  *gorm.DB
 	DBList              map[string]*gorm.DB
 	REDIS               redis.UniversalClient
 	REDISList           map[string]redis.UniversalClient
