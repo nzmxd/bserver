@@ -120,7 +120,7 @@ func (m *Minio) UploadLocalFile(localFilePath string, objectNamePrefix string) (
 	_, err = m.Client.PutObject(ctx, m.bucket, objectName, file, fileInfo.Size(), minio.PutObjectOptions{
 		ContentType: contentType,
 	})
-	return objectName, err
+	return global.CONFIG.Minio.BucketUrl + "/" + objectName, err
 }
 
 func (m *Minio) DeleteFile(key string) error {
