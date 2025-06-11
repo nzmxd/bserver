@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/nzmxd/bserver/global"
 	"github.com/nzmxd/bserver/initialize"
+	"github.com/nzmxd/bserver/utils/upload"
 	"go.uber.org/zap"
 	"time"
 )
@@ -33,6 +34,7 @@ func InitializeSystem() {
 	global.VP = Viper() // 初始化Viper
 	global.LOG = Zap()  // 初始化zap日志库
 	zap.ReplaceGlobals(global.LOG)
+	upload.NewOss()
 	global.DB = initialize.Gorm() // gorm连接数据库
 	global.CH = initialize.GormClickHouse()
 	initialize.DBList()
