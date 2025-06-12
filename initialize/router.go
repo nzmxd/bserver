@@ -44,8 +44,7 @@ func Routers() *gin.Engine {
 	// Router.StaticFile("/favicon.ico", "./dist/favicon.ico")
 	// Router.Static("/assets", "./dist/assets")   // dist里面的静态资源
 	// Router.StaticFile("/", "./dist/index.html") // 前端网页入口页面
-
-	Router.StaticFS(global.CONFIG.Local.StorePath, justFilesFilesystem{http.Dir(global.CONFIG.Local.StorePath)}) // Router.Use(middleware.LoadTls())  // 如果需要使用https 请打开此中间件 然后前往 core/server.go 将启动模式 更变为 Router.RunTLS("端口","你的cre/pem文件","你的key文件")
+	// Router.StaticFS(global.CONFIG.Local.StorePath, justFilesFilesystem{http.Dir(global.CONFIG.Local.StorePath)}) // Router.Use(middleware.LoadTls())  // 如果需要使用https 请打开此中间件 然后前往 core/server.go 将启动模式 更变为 Router.RunTLS("端口","你的cre/pem文件","你的key文件")
 	// 跨域，如需跨域可以打开下面的注释
 	// Router.Use(middleware.Cors()) // 直接放行全部跨域请求
 	// Router.Use(middleware.CorsByRules()) // 按照配置的规则放行跨域请求
