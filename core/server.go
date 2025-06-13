@@ -23,7 +23,7 @@ func RunServer() {
 	欢迎使用 bserver
 	当前版本:v1.0.0
 	默认前端文件运行地址:http://127.0.0.1:8080
-	默认前端文件运行地址:http://127.0.0.1:%s
+	默认前端文件运行地址:http://127.0.0.1%s
 `, address)
 	initServer(address, Router, 10*time.Minute, 10*time.Minute)
 }
