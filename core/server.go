@@ -10,13 +10,6 @@ import (
 )
 
 func RunServer() {
-	if global.CONFIG.System.UseRedis {
-		// 初始化redis服务
-		initialize.Redis()
-		if global.CONFIG.System.UseMultipoint {
-			initialize.RedisList()
-		}
-	}
 	Router := initialize.Routers()
 	address := fmt.Sprintf(":%d", global.CONFIG.System.Addr)
 	fmt.Printf(`
@@ -38,5 +31,12 @@ func InitializeSystem() {
 	global.DB = initialize.Gorm() // gorm连接数据库
 	global.CH = initialize.GormClickHouse()
 	initialize.DBList()
+	if global.CONFIG.System.UseRedis {
+		// 初始化redis服务
+		initialize.Redis()
+		if global.CONFIG.System.UseMultipoint {
+			initialize.RedisList()
+		}
+	}
 	initialize.SetupHandlers() // 注册全局函数
 }
