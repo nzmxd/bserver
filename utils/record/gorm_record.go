@@ -17,7 +17,7 @@ type IDGetter interface {
 
 type GormRecord[T IDGetter] struct {
 	DB            *gorm.DB
-	Redis         *redis.Client
+	Redis         redis.UniversalClient
 	RedisKey      string
 	StartRowID    int64                      // 初始 row_id
 	SelectFields  []string                   // 指定查询列
