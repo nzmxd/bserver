@@ -2,8 +2,8 @@ package initialize
 
 import (
 	"context"
-	"git.zingfront.cn/liubin/bserver/config"
-	"git.zingfront.cn/liubin/bserver/global"
+	"github.com/nzmxd/bserver/config"
+	"github.com/nzmxd/bserver/global"
 
 	"github.com/redis/go-redis/v9"
 	"go.uber.org/zap"

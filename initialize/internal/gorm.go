@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"git.zingfront.cn/liubin/bserver/config"
-	"git.zingfront.cn/liubin/bserver/global"
+	"github.com/nzmxd/bserver/config"
+	"github.com/nzmxd/bserver/global"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"gorm.io/gorm/schema"

@@ -3,7 +3,7 @@
 package initialize
 
 import (
-	"git.zingfront.cn/liubin/bserver/utils"
+	"github.com/nzmxd/bserver/utils"
 )
 
 // 初始化全局函数

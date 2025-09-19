@@ -1,7 +1,7 @@
 package core
 
 import (
-	"git.zingfront.cn/liubin/bserver/global"
+	"github.com/nzmxd/bserver/global"
 	"github.com/robfig/cron/v3"
 	"go.uber.org/zap"
 )

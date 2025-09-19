@@ -2,8 +2,8 @@ package upload
 
 import (
 	"errors"
-	"git.zingfront.cn/liubin/bserver/global"
-	"git.zingfront.cn/liubin/bserver/utils"
+	"github.com/nzmxd/bserver/global"
+	"github.com/nzmxd/bserver/utils"
 	"io"
 	"mime/multipart"
 	"os"

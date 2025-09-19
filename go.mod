@@ -1,4 +1,4 @@
-module git.zingfront.cn/liubin/bserver
+module github.com/nzmxd/bserver
 
 go 1.24
 

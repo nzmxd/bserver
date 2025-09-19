@@ -1,10 +1,10 @@
 package initialize
 
 import (
-	"git.zingfront.cn/liubin/bserver/config"
-	"git.zingfront.cn/liubin/bserver/global"
-	"git.zingfront.cn/liubin/bserver/initialize/internal"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/nzmxd/bserver/config"
+	"github.com/nzmxd/bserver/global"
+	"github.com/nzmxd/bserver/initialize/internal"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
