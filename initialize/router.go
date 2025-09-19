@@ -1,7 +1,7 @@
 package initialize
 
 import (
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/global"
 	"net/http"
 	"os"
 

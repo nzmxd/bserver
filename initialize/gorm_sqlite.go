@@ -1,10 +1,10 @@
 package initialize
 
 import (
+	"git.zingfront.cn/liubin/bserver/config"
+	"git.zingfront.cn/liubin/bserver/global"
+	"git.zingfront.cn/liubin/bserver/initialize/internal"
 	"github.com/glebarez/sqlite"
-	"github.com/nzmxd/bserver/config"
-	"github.com/nzmxd/bserver/global"
-	"github.com/nzmxd/bserver/initialize/internal"
 	"gorm.io/gorm"
 )
 

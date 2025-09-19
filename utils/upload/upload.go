@@ -1,7 +1,7 @@
 package upload
 
 import (
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/global"
 	"mime/multipart"
 )
 

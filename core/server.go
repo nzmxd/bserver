@@ -2,9 +2,9 @@ package core
 
 import (
 	"fmt"
-	"github.com/nzmxd/bserver/global"
-	"github.com/nzmxd/bserver/initialize"
-	"github.com/nzmxd/bserver/utils/upload"
+	"git.zingfront.cn/liubin/bserver/global"
+	"git.zingfront.cn/liubin/bserver/initialize"
+	"git.zingfront.cn/liubin/bserver/utils/upload"
 	"go.uber.org/zap"
 	"time"
 )

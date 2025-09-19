@@ -3,8 +3,8 @@ package core
 import (
 	"flag"
 	"fmt"
-	"github.com/nzmxd/bserver/core/internal"
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/core/internal"
+	"git.zingfront.cn/liubin/bserver/global"
 	"os"
 
 	"github.com/fsnotify/fsnotify"

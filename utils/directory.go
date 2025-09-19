@@ -2,7 +2,7 @@ package utils
 
 import (
 	"errors"
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/global"
 	"os"
 	"path/filepath"
 	"reflect"

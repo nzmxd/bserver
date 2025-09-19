@@ -2,8 +2,8 @@ package internal
 
 import (
 	"fmt"
-	"github.com/nzmxd/bserver/config"
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/config"
+	"git.zingfront.cn/liubin/bserver/global"
 	"gorm.io/gorm/logger"
 )
 

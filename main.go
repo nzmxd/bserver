@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/nzmxd/bserver/core"
+	"git.zingfront.cn/liubin/bserver/core"
 )
 
 func main() {

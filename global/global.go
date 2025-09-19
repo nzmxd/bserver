@@ -2,8 +2,8 @@ package global
 
 import (
 	"fmt"
-	"github.com/nzmxd/bserver/config"
-	"github.com/nzmxd/bserver/utils/timer"
+	"git.zingfront.cn/liubin/bserver/config"
+	"git.zingfront.cn/liubin/bserver/utils/timer"
 	"sync"
 
 	"github.com/gin-gonic/gin"

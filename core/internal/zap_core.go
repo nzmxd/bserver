@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/global"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"os"

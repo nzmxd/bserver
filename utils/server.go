@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/nzmxd/bserver/global"
+	"git.zingfront.cn/liubin/bserver/global"
 	"runtime"
 	"time"
 
